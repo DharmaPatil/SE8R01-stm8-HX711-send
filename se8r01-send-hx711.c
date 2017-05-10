@@ -10,6 +10,14 @@
    6 MOSI    PC6
    7 MISO    PC7
    8 IRQ     PD3
+
+   HX711 weight sensor
+
+port D
+HX711 PD2 PD3
+
+
+
  */
 
 
@@ -626,7 +634,6 @@ void HX711_CalibrationPoint2()
 
 
 int main () {
-        int ampere;
 	UCHAR rx_addr_p1[]  = { 0xd2, 0xf0, 0xf0, 0xf0, 0xf0 };
 	UCHAR tx_addr[]     = { 0xe1, 0xf0, 0xf0, 0xf0, 0xf0 };
 	UCHAR tx_payload[33];
@@ -655,29 +662,11 @@ int main () {
 
 
 	while (1) {
-//read analog value on port PD3  -- AIN4
-
-                ADC_CR1 |= ADC_ADON; // ADC ON
-		ADC_CSR |= ((0x0F)&4); // select channel = 4 = PD3
-		ADC_CR2 |= ADC_ALIGN; // Right Aligned Data
-		ADC_CR1 |= ADC_ADON; // start conversion 
-		while(((ADC_CSR)&(1<<7))== 0); // Wait till EOC
-		tx_payload[2] = (unsigned int)ADC_DRH;
-		tx_payload[3] = (unsigned int)ADC_DRL;
-
-//		ampere |= (unsigned int)ADC_DRL;
-		// UARTPrintF("value = \n\r");
-	//	ampere |= (unsigned int)ADC_DRH<<8;
-		ADC_CR1 &= ~(1<<0); // ADC Stop Conversion
-                ampere &= 0x03ff; // 0 bits resolution so above 0x0400 is nothing
-
 
 
 		//some testdata
-		tx_payload[0] = 0xac; //first two is unique ID for current sensor
-		tx_payload[1] = 0xcc;
-	//	tx_payload[2] = ampere>>8;
-	//	tx_payload[3] = ampere & 0x0f; 
+		tx_payload[0] = 0x0h; //first two is unique ID for current sensor
+		tx_payload[1] = 0x07;
 		write_spi_buf(iRF_CMD_WR_TX_PLOAD, tx_payload, 4);
 		write_spi_reg(WRITE_REG+STATUS, 0xff);
 		// readstatus = read_spi_reg(STATUS);
