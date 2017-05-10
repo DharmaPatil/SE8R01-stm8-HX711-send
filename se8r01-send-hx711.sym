@@ -1,0 +1,103 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8), page 1.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =  002710 L
+    .__.ABS.                                                    =  000000 G
+    .__.CPU.                                                    =  000000 L
+    .__.H$L.                                                    =  000001 L
+  2 _ADDRESS0                                                      00001A GR
+  2 _ADDRESS1                                                      000016 GR
+  2 _ADDRESS2                                                      000012 GR
+  2 _ADDRESS3                                                      000013 GR
+  2 _ADDRESS4                                                      000014 GR
+  2 _ADDRESS5                                                      000015 GR
+  8 _InitializeSPI                                                 00011C GR
+  8 _InitializeSystemClock                                         000144 GR
+  8 _InitializeUART                                                00023E GR
+  8 _SE8R01_Analog_Init                                            0004CB GR
+  8 _SE8R01_Calibration                                            0002FF GR
+  2 _SE8R01_DR_1M                                                  000002 GR
+  2 _SE8R01_DR_2M                                                  000000 GR
+  2 _SE8R01_DR_500K                                                000004 GR
+  8 _SE8R01_Init                                                   000647 GR
+  2 _TX_ADDRESS                                                    00000E GR
+  8 _UARTPrintF                                                    0001D9 GR
+  8 ___str_0                                                       00082F R
+  8 ___str_1                                                       00083B R
+  5 __interrupt_vect                                               000000 R
+    __mulint                                                       ****** GX
+  6 __sdcc_gs_init_startup                                         000000 R
+  6 __sdcc_init_data                                               000000 R
+  5 __sdcc_program_startup                                         000080 R
+  3 __start__stack                                                 000000 R
+  9 __xinit__ADDRESS0                                              00001A R
+  9 __xinit__ADDRESS1                                              000016 R
+  9 __xinit__ADDRESS2                                              000012 R
+  9 __xinit__ADDRESS3                                              000013 R
+  9 __xinit__ADDRESS4                                              000014 R
+  9 __xinit__ADDRESS5                                              000015 R
+  9 __xinit__SE8R01_DR_1M                                          000002 R
+  9 __xinit__SE8R01_DR_2M                                          000000 R
+  9 __xinit__SE8R01_DR_500K                                        000004 R
+  9 __xinit__TX_ADDRESS                                            00000E R
+  9 __xinit__newdata                                               000008 R
+  9 __xinit__pip                                                   00000B R
+  9 __xinit__pload_width_now                                       000006 R
+  9 __xinit__rx_buf                                                00001E R
+  9 __xinit__signal_lv                                             00000A R
+  9 __xinit__status                                                00000D R
+  9 __xinit__tx_buf                                                00003E R
+  8 _delay                                                         00018E GR
+  8 _delayTenMicro                                                 000000 GR
+  1 _gtemp                                                         000000 GR
+  8 _init_io                                                       0002B7 GR
+  8 _main                                                          0006EC GR
+    _memset                                                        ****** GX
+  1 _myData_pip4                                                   00000A GR
+  1 _myData_pip5                                                   000005 GR
+  2 _newdata                                                       000008 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8), page 2.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  2 _pip                                                           00000B GR
+  2 _pload_width_now                                               000006 GR
+  8 _print_UCHAR_hex                                               0001F0 GR
+  8 _read_spi_buf                                                  0000E0 GR
+  8 _read_spi_reg                                                  00006A GR
+  8 _rf_switch_bank                                                0002E2 GR
+  2 _rx_buf                                                        00001E GR
+  2 _signal_lv                                                     00000A GR
+  2 _status                                                        00000D GR
+  2 _tx_buf                                                        00003E GR
+  8 _write_spi                                                     000008 GR
+  8 _write_spi_buf                                                 0000A8 GR
+  8 _write_spi_reg                                                 00002E GR
+    l_DATA                                                         ****** GX
+    l_INITIALIZER                                                  ****** GX
+    s_DATA                                                         ****** GX
+    s_GSINIT                                                       ****** GX
+    s_INITIALIZED                                                  ****** GX
+    s_INITIALIZER                                                  ****** GX
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8), page 3.
+Hexadecimal [24-Bits]
+
+Area Table
+
+   0 _CODE                                      size      0   flags    0
+   1 DATA                                       size      F   flags    0
+   2 INITIALIZED                                size     5E   flags    0
+   3 SSEG                                       size      1   flags    0
+   4 DABS                                       size      0   flags    8
+   5 HOME                                       size     83   flags    0
+   6 GSINIT                                     size     1A   flags    0
+   7 GSFINAL                                    size      3   flags    0
+   8 CODE                                       size    847   flags    0
+   9 INITIALIZER                                size     5E   flags    0
+   A CABS                                       size      0   flags    8
+
